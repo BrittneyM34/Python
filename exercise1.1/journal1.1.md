@@ -1,11 +1,11 @@
-Exercise 1.1
+# Exercise 1.1
 
-Learning Goals:
+## Learning Goals:
 
 Summarize the uses and benefits of Python for web development
 Prepare your developer environment for programming with Python
 
-Reflection Questions: 
+## Reflection Questions: 
 
 1. In your own words, what is the difference between frontend and backend web development? If you were hired to work on backend programming for a web application, what kinds of operations would you be working on?
 
@@ -17,7 +17,7 @@ What do you want to learn about Python?
 What do you want to get out of this Achievement? 
 Where or what do you see yourself working on after you complete this Achievement?
 
-Answers: 
+## Answers: 
 1. Frontend development is the user interface and things you can interact with on a webpage. It is the things you can see on an application. Backend is the server side logic and data processing. These are the things that are happening behind the scenes that the user will not see. Working on backend uses APIs, databases, user authentication, and password hashing.
 
 2. Javascript and Python are both easy to learn and read. They both have large communities for support and many libraries and frameworks to use. The benefits of Python are its readability and it is more established for the back end with frameworks like Django. As well as its simplicity it allows faster development for complex back end logic.
