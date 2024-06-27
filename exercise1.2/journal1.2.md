@@ -1,4 +1,12 @@
-# Questions 
+# Exercise 1.2
+
+## Learning Goals:
+
+- Explain variables and data types in Python
+- Summarize the use of objects in Python
+- Create a data structure for your Recipe app
+  
+## Reflection Questions 
 
 1. Imagine you’re having a conversation with a future colleague about whether to use the iPython Shell instead of Python’s default shell. What reasons would you give to explain the benefits of using the iPython Shell over the default one
 
@@ -8,4 +16,4 @@
 
 4. In the task for this Exercise, you decided what you thought was the most suitable data structure for storing all the information for a recipe. Now, imagine you’re creating a language-learning app that helps users memorize vocabulary through flashcards. Users can input vocabulary words, definitions, and their category (noun, verb, etc.) into the flashcards. They can then quiz themselves by flipping through the flashcards. Think about the necessary data types and what would be the most suitable data structure for this language-learning app. Between tuples, lists, and dictionaries, which would you choose? Think about their respective advantages and limitations, and where flexibility might be useful if you were to continue developing the language-learning app beyond vocabulary memorization.
 
-# Answers:
+## Answers:
