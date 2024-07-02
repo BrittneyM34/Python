@@ -1,4 +1,4 @@
-# Exercise 1.2
+# Exercise 1.3
 
 ## Learning Goals:
 
