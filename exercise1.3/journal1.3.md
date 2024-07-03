@@ -21,15 +21,16 @@
 
 ## Answers
 
-1. destination = input("Where would you like to travel?")
-if destination == "Costa Rica":
-    print("Enjoy your stay in Costa Rica!")
-elif destination == "Mexico":
-    print("Enjoy your stay in Mexico!")
-elif destination == "Spain":
-    print("Enjoy your stay in Spain!")  
-else:
-    print("Oops, that destination is not currently available")
+1.
+- destination = input("Where would you like to travel?")
+- if destination == "Costa Rica":
+    - print("Enjoy your stay in Costa Rica!")
+- elif destination == "Mexico":
+    - print("Enjoy your stay in Mexico!")
+- elif destination == "Spain":
+    - print("Enjoy your stay in Spain!")  
+- else:
+    - print("Oops, that destination is not currently available")
 
 2. Logical operators in Python consist of and, not, and or, they are used in conditional statements.
    "And" checks if two different statements are true, if they both are it returns back true. If one or both is false then the statement returns false.
