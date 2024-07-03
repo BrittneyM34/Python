@@ -39,4 +39,4 @@
 
 3. Functions are a block of code that will be used multiple times within the same script file, this gets rid of redundant code and instead can just be called with the function name. This makes the code a lot easier to manage and makes it more reusable. They also create variables that are only able to be accessed inside of the function, as well as access variables that are outside the function.
 
-4. 
+4. I have been working with my private tutor to further understand the concept of object-oriented programming. Slowly I am getting the hang of it a little better. I have also been practicing writing code without referencing examples as much. I still have to reference examples but I am getting a little better at knowing at least part of it on my own without looking.
