@@ -18,7 +18,7 @@ def search_ingredient(data):
     print("Ingredients available:")
     print("----------------------------")
     for ingredient in numbered_ingredients:
-        print(ingredient[1], ingredient[2])
+        print(ingredient[0], ingredient[1])
 
     # Tries to search user-defined ingredient number
     try:
@@ -50,7 +50,7 @@ try:
 except FileNotFoundError: 
     print("File with that name was not found")
 
-# Closes file stream and initialized search_ingredient()
+# Closes file stream and initialized search_ingredient
 else:
     file.close()
     search_ingredient(data)
