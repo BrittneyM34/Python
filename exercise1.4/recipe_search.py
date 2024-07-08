@@ -27,11 +27,9 @@ def search_ingredient(data):
         # Stores the user-defined ingredient
         ingredient_searched = numbered_ingredients[n][1]
         print("Searching for recipes with that ingredient...")
-
     # If user enters anything but an integer
     except ValueError:
         print("Invalid input, only numbers allowed")
-
     # Prints every recipe with the ingredient
     else:
         for recipe in data["recipes_list"]:
@@ -45,11 +43,9 @@ try:
     file = open(file_name, "rb")
     data = pickle.load(file)
     print("File loaded.")
-
 # If user-defined filename not found, informs user
 except FileNotFoundError: 
     print("File with that name was not found")
-
 # Closes file stream and initialized search_ingredient
 else:
     file.close()
