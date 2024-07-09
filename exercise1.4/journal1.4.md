@@ -1,4 +1,4 @@
-# Exercise 1.3
+# Exercise 1.4
 
 ## Learning Goals:
 - Use files to store and retrieve data in Python
