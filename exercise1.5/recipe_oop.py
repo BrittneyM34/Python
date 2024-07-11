@@ -44,13 +44,13 @@ class Recipe(object):
             print("Something bad happened, please try again")
         return difficulty_level
     
-    def get_difficulty(self): 
+    def get_difficulty(self, cooking_time, ingredients): 
         if not self.difficulty:
-            self.calculate_difficulty()
+            self.calculate_difficulty(cooking_time, ingredients)
         return self.difficulty
     
     # A search method
-    def search_ingredients(self, ingredient, ingredients):
+    def search_ingredients(self, ingredient):
         if ingredient in self.ingredients:
             return True
         else: 
@@ -58,8 +58,8 @@ class Recipe(object):
         
     # A method called update_all_ingredients() that updates the all_ingredients list
     def update_all_ingredients(self):
-        for ingredient in self.ingredients:
-            if ingredient not in self.ingredients:
+        for ingredient in self.all_ingredients:
+            if ingredient not in self.all_ingredients:
                 self.all_ingredients.append(ingredient)
         
     # A string representation that prints the entire recipe over a well formatted string
