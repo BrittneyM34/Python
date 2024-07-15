@@ -23,7 +23,10 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS Recipes(
 def main_menu(conn, cursor):
     choice = ""
     while(choice != 'quit'):
+        print("Welcome to the Recipe App")
+        print("-------------------------------------------" )
         print("What would you like to do? Pick a choice!")
+        print("-------------------------------------------" )
         print("1. Create a recipe")
         print("2. Search for a recipe by ingredient")
         print("3. Update an existing recipe")
