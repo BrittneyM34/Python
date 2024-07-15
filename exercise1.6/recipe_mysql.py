@@ -29,8 +29,9 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS Recipes(
 def main_menu(conn, cursor):
     choice = ""
     while(choice != 'quit'):
+        print("=========================================")
         print("Welcome to the Recipe App")
-        print("-------------------------------------------" )
+        print("=========================================")
         print("What would you like to do? Pick a choice!")
         print("-------------------------------------------" )
         print("1. Create a recipe")
@@ -76,7 +77,7 @@ def create_recipe(conn, cursor):
 
         name = input(" Enter the recipe name: ")
         cooking_time = int(input(" Enter the cooking time in minutes: "))
-        ingredients_input = input(" Enter the recipe's ingredients, separateed by a comma: ")
+        ingredients_input = input(" Enter the recipe's ingredients, separated by a comma: ")
         ingredients = ingredients_input.split(", ")
 
         difficulty = calculate_difficulty(cooking_time, ingredients)
@@ -149,23 +150,24 @@ def search_recipe(conn, cursor):
     print()
     while True:
         try:
-            choice = int(input("Enter a number for the ingredient"))
+            choice = int(input("Enter a number for the ingredient "))
             if 1 <= choice <= len(all_ingredients):
                 break
             else:
                 print()
-                print("Please print a number within the range")
+                print("Please print a number within the range ")
         except ValueError:
             print()
-            print("Invalid input. Please enter a number")
+            print("Invalid input. Please enter a number ")
 
-        selected_ingredient = sorted(all_ingredients[choice - 1])
+        selected_ingredient = sorted(all_ingredients)[choice - 1]
          
-        search_ingredient = "SELECT * FROM Recipes WHERE ingredients LIKE %s"
-        cursor.execute(search_ingredient, ("%" + selected_ingredient + "%"))
+        search_query = "SELECT * FROM Recipes WHERE ingredients LIKE %s"
+        cursor.execute(search_query, ("%" + selected_ingredient + "%"))
         search_results = cursor.fetchall()
 
         if search_results:
+            print("Hello")
             recipe_count = len(search_results)
             recipe_word = "recipe" if recipe_count == 1 else "recipes"
             print(f"\n{recipe_count} {recipe_word} found containing'{selected_ingredient.title()}'\n")
