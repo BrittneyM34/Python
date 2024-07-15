@@ -1,12 +1,18 @@
 import mysql.connector
 
+# Connect to mySQL user
 conn = mysql.connector.connect(
     host = "localhost",
     user = "cf-python",
     passwd = "password"
 )
 
+# Create cursor 
 cursor = conn.cursor()
+
+# Database name and table name and columns
+db_name = "task_database"
+table_name = "Recipes"
 
 cursor.execute("CREATE DATABASE IF NOT EXISTS task_database")
 
@@ -328,5 +334,4 @@ def delete_recipe(conn, cursor):
         print("----------------------------")   
         print("Returning to main menu....")
 
-        main_menu(conn, cursor)     
-
+main_menu(conn, cursor)  
