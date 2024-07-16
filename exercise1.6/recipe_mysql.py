@@ -276,18 +276,17 @@ def delete_recipe(conn, cursor):
         print(" Returning to main menu... ")
         return
 
-    if results: 
-        print()
-        print(" --------------------------------------- ")
-        print(" ** Delete a recipe by ID number ** ")
-        print("Please enter an ID number to delete that recipe\n")
-        print("This can NOT be undone")
-        print(" --------------------------------------- ")
+    print()
+    print(" --------------------------------------- ")
+    print(" ** Delete a recipe by ID number ** ")
+    print("Please enter an ID number to delete that recipe\n")
+    print("This can NOT be undone")
+    print(" --------------------------------------- ")
 
-        print(" **Available recipes** ")
-        print("------------------------------")
+    print(" **Available recipes** ")
+    print("------------------------------")
 
-    for result in results: 
+    for result in results:
         ingredients_list = result[2].split(", ")
         capitalized_ingredients = [ingredient.title() for ingredient in ingredients_list]
         capitalized_ingredients_str = ", ".join(capitalized_ingredients)
@@ -295,32 +294,32 @@ def delete_recipe(conn, cursor):
         print(f"ID: {result[0]} | Name: {result[1]}")
         print(f"Ingredients: {capitalized_ingredients_str} | Cooking Time: {result[3]} | Difficulty: {result[4]}\n")
 
-        while True:
-            try:
-                print() 
-                recipe_id = int(input("Enter the ID of the recipe to delete: "))
-                print()
-                cursor.execute("SELECT * FROM Recipes Where id = %s", (recipe_id,))
+    while True:
+        try:
+            print() 
+            recipe_id = int(input("Enter the ID of the recipe to delete: "))
+            print()
+            cursor.execute("SELECT * FROM Recipes Where id = %s", (recipe_id,))
 
-                if cursor.fetchone()[0] == 0:
+            if cursor.fetchone()[0] == 0:
                     print("No recipe found with the entered ID. Please try again.\n")
+            else:
+                cursor.execute("SELECT name FROM Recipes WHERE id = %s", (recipe_id,))
+                recipe_name = cursor.fetchone()[0]
+                confirm = input(f"Are you sure you want to delete '{recipe_name}'? (Yes/No): ").lower()
+
+                if confirm == "yes":
+                    break
+                elif confirm == "no":
+                    print()
+                    print("Deletion cancelled. Returning to main menu...")
+                    return
                 else:
-                    cursor.execute("SELECT name FROM Recipes WHERE id = %s", (recipe_id,))
-                    recipe_name = cursor.fetchone()[0]
-                    confirm = input(f"Are you sure you want to delete '{recipe_name}'? (Yes/No): ").lower()
+                    print()
+                    print("Please enter answer with 'yes' or 'no'.")
 
-                    if confirm == "yes":
-                        break
-                    elif confirm == "no":
-                        print()
-                        print("Deletion cancelled. Returning to main menu...")
-                        return
-                    else:
-                        print()
-                        print("Please enter answer with 'yes' or 'no'.")
-
-            except ValueError:
-                print("Invalid input. Please enter a numeric value")
+        except ValueError:
+            print("Invalid input. Please enter a numeric value")
 
     cursor.execute("DELETE FROM Recipes WHERE id = %s", (recipe_id,))
 
