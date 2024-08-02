@@ -15,4 +15,16 @@
 3. Read Django's documentation on the Django template language and make some notes on its basics
 
 ## Answers:
-1.
+1. In Django the views are Python functions that handle requests and return web responses. They are used like a bridge between the user and the data processed by the application.
+
+2. I would use class based views because they are easier to reuse and they will keep the code more organized.
+
+3. Django's template language is designed to be simple and intuitive. This allows you to separate the presentation logic from the application code.
+Some basic syntax:
+<h1>Hello, {{ name }}!</h1>
+{# This is a comment #}
+{% if user.is_authenticated %}
+  Welcome, {{ user.username }}!
+{% else %}
+  Please log in.
+{% endif %}
