@@ -17,7 +17,7 @@
 ## Answers:
 1. CareerFoundry collects many different types of data, for example, user feedback, course engagement metrics, and user demographics. This data could offer benefits such as personalization. By understanding the user demographics it can help the platform personalize course recommendations. This will make the learning more effective and engaging for every user. It can also help improve the coure. User feedback can highlight areas where the course cmay need imporvement or updating. This ensures the content stays relevant and up to date, as well as improve the quality of the content.
 
-2.· Aggregation: .aggregate() provides a way to perform calculations over a set of records, like counting, summing, averaging, etc.
+2. Aggregation: .aggregate() provides a way to perform calculations over a set of records, like counting, summing, averaging, etc.
 · Retrieving All Objects: Using .all() to fetch all records from a given model.
 · Filtering: .filter() allows for narrowing down the query results based on specified criteria.
 · Ordering: .order_by() is used to sort the results based on given fields.
